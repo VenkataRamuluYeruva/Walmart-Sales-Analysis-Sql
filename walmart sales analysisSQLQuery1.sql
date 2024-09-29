@@ -78,15 +78,15 @@ group by month_name order by largest_cogs desc
 select top 1 Product_line,round(sum(total),2)as total_product_revenue from Walmart_Data
 group by Product_line order by total_product_revenue desc
 
--- 5. What is the city with the largest revenue?
+-- 7. What is the city with the largest revenue?
 select top 1 city,round(sum(total),2)as revenue from
 Walmart_Data group by city order by revenue desc
 
--- 6. What product line had the largest VAT?
+-- 8. What product line had the largest VAT?
 select product_line,round(avg(tax),2)as vat from Walmart_Data
 group by Product_line order by vat desc
 
---7.  Fetch each product line and add a column to those product line showing "Good", "Bad".Good if its greater than average sales
+--9.  Fetch each product line and add a column to those product line showing "Good", "Bad".Good if its greater than average sales
 select product_line,
 	case
 		when sales>(select AVG(quantity) from Walmart_Data) Then 'Good'
@@ -96,17 +96,17 @@ from
 (select product_line,sum(quantity)as sales from Walmart_Data
 group by Product_line)as t
 
--- 8. Which branch sold more products than average product sold?
+-- 10. Which branch sold more products than average product sold?
 select branch,sum(quantity)as sold from Walmart_Data
 group by branch having sum(quantity)>(select avg(quantity) from Walmart_Data)
 
--- 9. What is the most common product line by gender?
+-- 11. What is the most common product line by gender?
 select Product_line,gender,cnt from (select product_line,gender,count(product_line)as cnt,
 (rank()over(partition by gender order by count(product_line) desc))as rank_no from Walmart_Data
 group by Product_line,gender) as t1
 where rank_no=1
 
--- . What is the average rating of each product line?
+-- 12. What is the average rating of each product line?
 select product_line, round(avg(rating),2)as average from Walmart_Data
 group by Product_line order by average desc
 
@@ -130,7 +130,7 @@ group by customer_type order by vat desc
 
          -----------  *  CUSTOMER ANALYSIS  *  --------------
 
--- How many unique customer types does the data have?
+--1.How many unique customer types does the data have?
 select count(distinct customer_type)as unique_customer_types from Walmart_Data
 
 -- 2. How many unique payment methods does the data have?
@@ -160,7 +160,7 @@ group by time_of_day
 select branch,time_of_day,round(avg(rating),2)as avg_rating from Walmart_Data
 group by Branch,time_of_day order by branch
 
---  Which day fo the week has the best avg ratings?
+--9. Which day fo the week has the best avg ratings?
 select day_name,round(avg(rating),2)as avg_rating from Walmart_Data
 group by day_name order by avg_rating desc
 
