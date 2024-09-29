@@ -86,6 +86,16 @@ Walmart_Data group by city order by revenue desc
 select product_line,round(avg(tax),2)as vat from Walmart_Data
 group by Product_line order by vat desc
 
+--7.  Fetch each product line and add a column to those product line showing "Good", "Bad".Good if its greater than average sales
+select product_line,
+	case
+		when sales>(select AVG(quantity) from Walmart_Data) Then 'Good'
+		else 'Bad'
+	end
+from
+(select product_line,sum(quantity)as sales from Walmart_Data
+group by Product_line)as t
+
 -- 8. Which branch sold more products than average product sold?
 select branch,sum(quantity)as sold from Walmart_Data
 group by branch having sum(quantity)>(select avg(quantity) from Walmart_Data)
