@@ -8,8 +8,8 @@ The major aim of thie project is to gain insights into the sales data of Walmart
 ## About Dataset
 The dataset we used for this project contains the 17 columns and 1000 rows:
 
-Column(Data Type)-----------------------Description              
----------------------- |--------------------------------------
+Column----------------------------------------------(Data Type)------------------------------Description              
+---------------------- ------------------------------------|----------------------------------------------------
 invoice_id---------------------------------------(VARCHAR(30))----------------------------Invoice of the sales made
 branch-------------------------------------------(VARCHAR(5))-----------------------------Branch at which sales were made
 city----------------------------------------------(VARCHAR(30))----------------------------The location of the branch
