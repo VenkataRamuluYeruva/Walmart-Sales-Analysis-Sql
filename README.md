@@ -87,4 +87,4 @@ The dataset we used for this project contains the 17 columns and 1000 rows:
 9. Which day fo the week has the best avg ratings?
 10. Which day of the week has the best average ratings per branch?
 
-
+**NOTE**:Requesting everyone to share your feedback with me on this project.
