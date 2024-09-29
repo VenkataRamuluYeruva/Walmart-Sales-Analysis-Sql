@@ -10,23 +10,23 @@ The dataset we used for this project contains the 17 columns and 1000 rows:
 
 Column(Data Type)-----------------------Description              
 ---------------------- |--------------------------------------
-invoice_id(VARCHAR(30))-----------------Invoice of the sales made
-branch(VARCHAR(5))----------------------Branch at which sales were made
-city (VARCHAR(30))----------------------The location of the branch
-customer_type(VARCHAR(30) )-------------The type of the customer           
-gender(VARCHAR(10))---------------------Gender of the customer making purchase
-product_line(VARCHAR(100))--------------Product line of the product solf 
-unit_price(DECIMAL(10, 2))--------------The price of each product 
-quantity(INT)---------------------------The amount of the product sold   
-VAT(FLOAT(6, 4))------------------------The amount of tax on the purchase    
-total(DECIMAL(10, 2))-------------------The total cost of the purchase   
-date(DATE)------------------------------The date on which the purchase was made
-time(TIMESTAMP)-------------------------The time at which the purchase was made 
-payment_method(DECIMAL(10, 2))----------The total amount paid                  
-cogs(DECIMAL(10, 2))--------------------Cost Of Goods sold          
-gross_margin_percentage(FLOAT(11, 9))---Gross margin percentage               
-gross_income(DECIMAL(10, 2))------------Gross Income                         
-rating(FLOAT(2, 1))---------------------Rating                           
+invoice_id---------------------------------------(VARCHAR(30))----------------------------Invoice of the sales made
+branch-------------------------------------------(VARCHAR(5))-----------------------------Branch at which sales were made
+city----------------------------------------------(VARCHAR(30))----------------------------The location of the branch
+customer_type--------------------------------------(VARCHAR(30) )---------------------------The type of the customer           
+gender---------------------------------------------(VARCHAR(10))----------------------------Gender of the customer making purchase
+product_line-----------------------------------------(VARCHAR(100))-------------------------Product line of the product solf 
+unit_price-------------------------------------------(DECIMAL(10, 2))-----------------------The price of each product 
+quantity---------------------------------------------(INT)----------------------------------The amount of the product sold   
+VAT---------------------------------------------------(FLOAT(6, 4))-------------------------The amount of tax on the purchase    
+total-------------------------------------------------(DECIMAL(10, 2))-----------------------The total cost of the purchase   
+date--------------------------------------------------(DATE)---------------------------------The date on which the purchase was made
+time-------------------------------------------------(TIMESTAMP)-----------------------------The time at which the purchase was made 
+payment_method-----------------------------------------(DECIMAL(10, 2))-----------------------The total amount paid                  
+cogs--------------------------------------------------(DECIMAL(10, 2))------------------------Cost Of Goods sold          
+gross_margin_percentage-------------------------------(FLOAT(11, 9))---------------------------Gross margin percentage               
+gross_income-------------------------------------------(DECIMAL(10, 2))------------------------Gross Income                         
+rating-------------------------------------------------(FLOAT(2, 1))---------------------------Rating                           
 
 ## Approach Used
 
